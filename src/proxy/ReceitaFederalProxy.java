@@ -23,7 +23,7 @@ public class ReceitaFederalProxy extends ReceitaFederal {
     @Override
     public String getPagarFisico() {
         if (!"".equals(this.documento)) {
-            return super.getPagarFisico();
+            return super.getPagarFisico(this.documento,this.volorDocumento,this.valorImposto);
         }
         return null;
     }
@@ -31,7 +31,7 @@ public class ReceitaFederalProxy extends ReceitaFederal {
     @Override
     public String getPagarJuridico() {
         if (!"".equals(this.documento)) {
-            return super.getPagarJuridico();
+            return super.getPagarJuridico(this.documento,this.volorDocumento,this.valorImposto);
         }
         return null;
         

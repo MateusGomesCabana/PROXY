@@ -19,11 +19,19 @@ public class ReceitaFederal {
     }
 
     public String getPagarFisico() {
-        return new String("o valor pago para a pessoa fisica: " + valueDocument);
+        return null;
+    }
+
+    public String getPagarFisico(String documento, float volorDocumento, float valorImposto) {
+        return "foi pago";
     }
 
     public String getPagarJuridico() {
-        return new String("o valor pago para a pessoa juridica: " + valueDocument);
+        return null;
+    }
+
+    String getPagarJuridico(String documento, float volorDocumento, float valorImposto) {
+      return "foi pago";
     }
 
 }
