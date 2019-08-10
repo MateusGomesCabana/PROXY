@@ -18,17 +18,10 @@ public class ReceitaFederal {
 
     }
 
-    public String getPagarFisico() {
-        return null;
-    }
-
     public String getPagarFisico(String documento, float volorDocumento, float valorImposto) {
         return "foi pago";
     }
 
-    public String getPagarJuridico() {
-        return null;
-    }
 
     String getPagarJuridico(String documento, float volorDocumento, float valorImposto) {
       return "foi pago";

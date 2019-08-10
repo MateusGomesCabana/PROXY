@@ -11,30 +11,16 @@ package proxy;
  */
 public class ReceitaFederalProxy extends ReceitaFederal {
 
-    protected String documento;
-    protected float volorDocumento, valorImposto;
+    protected String usuario, senha;
 
-    public ReceitaFederalProxy(String documento, float volorDocumento, float valorImposto) {
-        this.documento = documento;
-        this.volorDocumento = volorDocumento;
-        this.valorImposto = valorImposto;
+    public ReceitaFederalProxy(String usuario, String senha) {
+        this.usuario = usuario;
+        this.senha = senha;
     }
 
-    @Override
-    public String getPagarFisico() {
-        if (!"".equals(this.documento)) {
-            return super.getPagarFisico(this.documento,this.volorDocumento,this.valorImposto);
-        }
-        return null;
+    ******
+    
+    private boolean temPermissaoDeAcesso() {
+        return usuario == "admin" && senha == "admin";
     }
-
-    @Override
-    public String getPagarJuridico() {
-        if (!"".equals(this.documento)) {
-            return super.getPagarJuridico(this.documento,this.volorDocumento,this.valorImposto);
-        }
-        return null;
-        
-    }
-
 }

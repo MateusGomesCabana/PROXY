@@ -17,7 +17,6 @@ public class PROXY {
     public static void main(String[] args) {
         ReceitaFederal receita = new ReceitaFederalProxy("documento", 0, 0);
         System.out.println(receita.getPagarFisico());
-        // TODO code application logic here
     }
-    
+
 }
