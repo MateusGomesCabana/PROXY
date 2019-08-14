@@ -15,8 +15,8 @@ public class PROXY {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ReceitaFederal receita = new ReceitaFederalProxy("documento", 0, 0);
-        System.out.println(receita.getPagarFisico());
+        ReceitaFederal receita = new ReceitaFederalProxy("usuario", "senha");
+        System.out.println(receita.getPagarFisico("123", 12, 5));
     }
 
 }

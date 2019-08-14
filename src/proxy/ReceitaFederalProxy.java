@@ -18,9 +18,19 @@ public class ReceitaFederalProxy extends ReceitaFederal {
         this.senha = senha;
     }
 
-    ******
-    
-    private boolean temPermissaoDeAcesso() {
-        return usuario == "admin" && senha == "admin";
+    @Override
+    public String getPagarFisico(String documento, float volorDocumento, float valorImposto) {
+        if (this.usuario.equals("usuario") && this.senha.equals("senha")) {
+            return super.getPagarFisico(documento, volorDocumento, valorImposto);
+        }
+        return null;
+    }
+
+    @Override
+    public String getPagarJuridico(String documento, float volorDocumento, float valorImposto) {
+        if (this.usuario.equals("usuario") && this.senha.equals("senha")) {
+            return super.getPagarJuridico(documento, volorDocumento, valorImposto);
+        }
+        return null;
     }
 }

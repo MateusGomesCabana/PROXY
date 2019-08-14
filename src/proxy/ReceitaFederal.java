@@ -15,16 +15,18 @@ public class ReceitaFederal {
     String document;
 
     public ReceitaFederal() {
+        valueImposto = 5;
 
     }
 
-    public String getPagarFisico(String documento, float volorDocumento, float valorImposto) {
-        return "foi pago";
+    public String getPagarFisico(String documento, float valorDocumento, float valorImposto) {
+        this.document = documento;
+        this.valueDocument = valorDocumento;
+        return "foi pago o documento " + this.document + " do valor do documento " + this.valueDocument + "e com carga de pessoa fisica de " + (this.valueImposto * valorImposto);
     }
 
-
-    String getPagarJuridico(String documento, float volorDocumento, float valorImposto) {
-      return "foi pago";
+    public String getPagarJuridico(String documento, float valorDocumento, float valorImposto) {
+        return "foi pago o documento " + this.document + " do valor do documento " + this.valueDocument + "e com carga de pessoa juridica de " + (valorImposto);
     }
 
 }
